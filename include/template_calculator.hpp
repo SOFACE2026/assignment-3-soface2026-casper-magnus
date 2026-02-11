@@ -14,13 +14,35 @@ public:
     // Implement this:
     T sum(T a, T b)
     {
-        return 0;
+        // beregner a + b
+    T result = a + b;
+
+    // opretter en string stream
+    std::stringstream ss;
+    // formaterer teksten så den matcher den i testen og opgaven
+    ss << "taking the sum of: '" << a << "' and '" << b << "' which is '" << result << "'";
+
+    // konverterer indholdet af streamen til en string og logger den
+    logger->log(ss.str());
+    // returnerer result
+    return result;
     }
 
     // Implement this:
     T multiply(T a, T b)
     {
-        return 0;
+         // beregner a * b
+    T result = a * b;
+
+    // opretter en string stream
+    std::stringstream ss;
+    // formaterer teksten så den matcher den i testen og opgaven
+    ss << "taking the product of: '" << a << "' and '" << b << "' which is '" << result << "'";
+
+    // konverterer indholdet af streamen til en string og logger den
+    logger->log(ss.str());
+    // returnerer result
+    return result;
     }
 
 private:

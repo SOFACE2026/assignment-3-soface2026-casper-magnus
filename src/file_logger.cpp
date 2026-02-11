@@ -2,17 +2,23 @@
 #include <fstream>
 #include <iostream>
 
-// Implement this:
+// Constructor 
 FileLogger::FileLogger(std::string filename)
 {
+    // åbner filen til skrivning
+    logfile.open(filename, std::ios::out);
 }
 
-// Implement this:
+// Log
 void FileLogger::log(std::string msg)
 {
+    // skriver indholdet til filen endl for linjeskift
+    logfile << msg << std::endl;
 }
 
-// Implement this:
+// Destructor
 FileLogger::~FileLogger()
 {
+    // lukker filen igen
+    logfile.close();
 }
